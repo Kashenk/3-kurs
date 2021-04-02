@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+	<p> Задача 1. Почему код даёт именно такие результаты?<br>var a = 1, b = 1, c, d;<br>
+		c = ++a; alert(c); // 2<br>  ++a означает что мы к переменной а прибавляем единицу <br>d = b++; alert(d); // 1 <br> ++ после переменной означает, что мы прибавляем единицу, но выводим предыдущее значение переменной <br>c = (2+ ++a); alert(c); // 5  <br> 
+						прибавляем еще единицу и а становится равно 3, отсюда ответ 5т.к. в первом примере мы прибавили единицу в переменную а ее значение стало равно 	
+						2 	d = (2+ b++); alert(d); // 4 <br> т.к. во втором примере мы прибавили единицу в переменную b ее значение стало равно 	2.В данном примере прибавляем еще единицу и а становится равно 3, но выводим 		предыдущее значение т.е. 2, отсюда получаем 4  <br> 
+		alert(a); // 3	 прибавили единицу в примере 1 и примере 3  <br> 
+		alert(b); // 3	 прибавили единицу в примере 2 и примере 4 </p>
+	
+	
+
+		 Задача 2. Чему будет равен x в примере ниже? 
+	var a = 2;
+		var x = 1 + (a *= 2);  X будет равен 5 <br><br><br>
+
+3. Объявить две целочисленные переменные — a и b и задать им произвольные начальные значения. Затем написать скрипт, который работает по следующему принципу:
+
+o если a и b положительные, вывести их разность;
+
+o если а и b отрицательные, вывести их произведение;
+
+o если а и b разных знаков, вывести их сумму;
+
+Ноль можно считать положительным числом. <br><br><br>
+<script>
+
+		var a = +prompt ('Введите число 1'); 
+		var b = +prompt('Введите число 2') ;
+		if (a > 0 && b > 0){
+		x = a - b;
+		alert(x);
+		} else if (a < 0 && b < 0){
+			x = a * b;
+			alert (x);
+			}
+		  else if (a > 0 && b < 0 || a < 0 && b > 0) {
+		  x = a + b;
+		  alert (x);
+		  }
+               
+	</script>
+	
+	4. Присвоить переменной а значение в промежутке [0..15]. С помощью оператора switch организовать вывод чисел от a до 15. <br><br><br>
+	<script>
+		a = +prompt ('Введите число от 1 до 15');
+		switch (a) {
+		case 1:
+			alert ( 'Ваше число 1');
+			break;
+		case 2:
+			alert ( 'Ваше число 2');
+			break;
+		case 3:
+			alert ( 'Ваше число 3');
+			break;
+		case 4:
+			alert ( 'Ваше число 4');
+			break;
+		case 5:
+			alert ( 'Ваше число 5');
+			break;
+		case 6:
+			alert ( 'Ваше число 6');
+			break;
+		case 7:
+			alert ( 'Ваше число 7');
+			break;
+		case 8:
+			alert ( 'Ваше число 8');
+			break;
+		case 9:
+			alert ( 'Ваше число 9');
+			break;
+		case 10:
+			alert ( 'Ваше число 10');
+			break;
+		case 11:
+			alert ( 'Ваше число 11');
+			break;
+		case 12:
+			alert ( 'Ваше число 12');
+			break;
+		case 13:
+			alert ( 'Ваше число 13');
+			break;
+		case 14:
+			alert ( 'Ваше число 14');
+			break;
+		case 15:
+			alert ( 'Ваше число 15');
+			break;	
+		}	
+	</script>
+
+	5. Реализовать четыре основные арифметические операции в виде функций с двумя параметрами. Обязательно использовать оператор return.
+<script>
+   function average(x, y) { return (x + y); }avg = average(300, 4); alert(avg);
+    function average(x, y) { return (x - y); }avg = average(7, 400); alert(avg);
+    function average(x, y) { return (x /  y)/2; }avg = average(356, 4); alert(avg);
+   function average (x, y) {
+    		return a + b;
+		}  </script> 
+	<script>	
+        function fibonacci(n, prev1, prev2){ var current = prev1 + prev2; var fibonacci_string = current + " "; if(n > 1) fibonacci_string += fibonacci(n - 1, current, prev1); return fibonacci_string; } alert(fibonacci(15, 1, 0));</script>
+  
+</body>
+</html>
